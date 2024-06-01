@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>C/C++</id>
+          </State>
+          <State>
+            <id>Cargo.tomlRust</id>
+          </State>
+          <State>
+            <id>Imports and dependenciesJavaScript and TypeScript</id>
+          </State>
+          <State>
+            <id>JavaScript and TypeScript</id>
+          </State>
+          <State>
+            <id>LintsRust</id>
+          </State>
+          <State>
+            <id>Naming conventionsLintsRust</id>
+          </State>
+          <State>
+            <id>Objective-C</id>
+          </State>
+          <State>
+            <id>Rust</id>
+          </State>
+          <State>
+            <id>Static Analysis ToolsC/C++</id>
+          </State>
+          <State>
+            <id>Unused codeObjective-C</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>RsUnusedImport</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+</project>

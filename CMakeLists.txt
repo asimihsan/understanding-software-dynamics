@@ -1,14 +1,10 @@
-cmake_minimum_required(VERSION 3.10)
-project(MyCProject VERSION 1.0 LANGUAGES C)
+cmake_minimum_required(VERSION 3.28)
+project(MyC17Project C)
 
-set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_STANDARD_REQUIRED True)
+set(CMAKE_C_STANDARD 17)
 
-add_subdirectory(chapters ${CMAKE_BINARY_DIR}/chapters_build)
-cmake_minimum_required(VERSION 3.10)
-project(MyCProject VERSION 1.0 LANGUAGES C)
+# Include directories
+include_directories(${PROJECT_SOURCE_DIR}/include)
 
-set(CMAKE_C_STANDARD 11)
-set(CMAKE_C_STANDARD_REQUIRED True)
-
-add_subdirectory(chapters ${CMAKE_BINARY_DIR}/chapters_build)
+# Add subdirectories for source files
+add_subdirectory(src)
