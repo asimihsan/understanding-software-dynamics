@@ -10,7 +10,8 @@
   <a href="#running-the-binaries">Running the Binaries</a>
 </p>
 
-`understanding_software_dynamics` is a project that involves reading and implementing concepts from the book "Understanding Software Dynamics" by Richard L. Sites.
+`understanding_software_dynamics` is a project that involves reading and implementing concepts from the
+book ["Understanding Software Dynamics" by Richard L. Sites](https://www.goodreads.com/book/show/57850403-understanding-software-dynamics).
 
 ## Prerequisites
 
