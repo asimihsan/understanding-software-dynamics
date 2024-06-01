@@ -42,10 +42,10 @@ extern "C" instrumentation_result get_instrumentation_result() {
 
 extern "C" void print_instrumentation_report() {
     printf("Elapsed time (ns): %f\n", result.elapsed_ns());
-    printf("Instructions: %lu\n", result.instructions());
-    printf("Cycles: %lu\n", result.cycles());
-    printf("Branches: %lu\n", result.branches());
-    printf("Branch misses: %lu\n", result.branch_misses());
+    printf("Instructions: %lld\n", result.instructions());
+    printf("Cycles: %lld\n", result.cycles());
+    printf("Branches: %lld\n", result.branches());
+    printf("Branch misses: %lld\n", result.branch_misses());
     printf("IPC: %.2f\n", result.instructions() / (double) result.cycles());
     printf("Branch prediction miss rate: %.2f\n",
            result.branch_misses() / (double) result.branches());
