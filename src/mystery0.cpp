@@ -27,7 +27,7 @@ int main(int argc, const char **argv) {
     event_count result = collector.end(); // End collecting performance events
 
     // Calculate cycles per iteration
-    double cycles_per_iteration = static_cast<double>(result.cycles()) / kIterations;
+    double cycles_per_iteration = result.cycles() / kIterations;
 
     // Print the performance results
     printf("Elapsed time (ns): %f\n", result.elapsed_ns());
