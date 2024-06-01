@@ -13,13 +13,16 @@ int main(int argc, const char **argv) {
         return rc;
     }
 
-    for (int i = 0; i < kIterations; i += 1) {   // loop kIterations times
+    for (int i = 0; i < kIterations; i += 4) {   // loop kIterations times
+        sum += 1;                               // the add we want to measure
+        sum += 1;                               // the add we want to measure
+        sum += 1;                               // the add we want to measure
         sum += 1;                               // the add we want to measure
     }
 
     stop_instrumentation();
     instrumentation_result res = get_instrumentation_result();
-    printf("Cycles per iteration: %.2f\n\n", res.cycles / (double) kIterations);
+    printf("Cycles per iteration: %f\n\n", res.cycles / ((double) kIterations * 4));
     print_instrumentation_report();
 
     return 0;
