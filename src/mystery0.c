@@ -1,6 +1,7 @@
 #include "instrumentation/instrumentation.h"
 
 #include <stdint.h>
+#include <printf.h>
 
 static const int kIterations = 1000 * 2000000;
 
@@ -21,6 +22,7 @@ int main(int argc, const char **argv) {
 
     stop_instrumentation();
     instrumentation_result res = get_instrumentation_result();
+    printf("Cycles per iteration: %f\n\n", res.cycles / (double) kIterations);
     print_instrumentation_report();
 
     return 0;

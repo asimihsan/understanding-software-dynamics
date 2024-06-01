@@ -1,4 +1,4 @@
-#include "performancecounters/instrumentation.h"
+#include "instrumentation/instrumentation.h"
 #include "performancecounters/event_counter.h"
 
 #include <iostream>
@@ -22,6 +22,22 @@ extern "C" int start_instrumentation() {
 
 extern "C" void stop_instrumentation() {
     result = collector.end();
+}
+
+extern "C" instrumentation_result get_instrumentation_result() {
+    instrumentation_result res;
+    res.elapsed_ns = result.elapsed_ns();
+    res.instructions = result.instructions();
+    res.cycles = result.cycles();
+    res.branches = result.branches();
+    res.branch_misses = result.branch_misses();
+    res.ipc = result.instructions() / (double) result.cycles();
+    res.branch_miss_rate = result.branch_misses() / (double) result.branches();
+    res.branch_hit_rate = 1.0 - result.branch_misses() / (double) result.branches();
+    res.instructions_per_branch_miss = result.instructions() / (double) result.branch_misses();
+    res.instructions_per_branch_hit = result.instructions() / (double) (result.branches() -
+                                                                        result.branch_misses());
+    return res;
 }
 
 extern "C" void print_instrumentation_report() {

@@ -1,6 +1,8 @@
 #ifndef INSTRUMENTATION_H
 #define INSTRUMENTATION_H
 
+#include <stdint.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -19,8 +21,11 @@ typedef struct {
 } instrumentation_result;
 
 int start_instrumentation();
+
 void stop_instrumentation();
+
 instrumentation_result get_instrumentation_result();
+
 void print_instrumentation_report();
 
 #ifdef __cplusplus
