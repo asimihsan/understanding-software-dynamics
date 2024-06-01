@@ -18,7 +18,7 @@ You can install the required tools using Homebrew:
 
 ```sh
 brew install cmake
-brew install gcc
+brew install clang
 ```
 
 ### Installing Prerequisites on Linux
@@ -32,9 +32,9 @@ sudo apt-get install cmake g++
 
 ## Building the Project
 
-### Building on Mac (AARCH64)
+### Building on Mac (aarch64)
 
-To build the project for Mac (AARCH64), run the following commands:
+To build the project for Mac (aarch64), run the following commands:
 
 ```sh
 ./scripts/build-mac-aarch64.sh
