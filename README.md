@@ -80,7 +80,7 @@ because we need privileged access to performance counters.
 We are trying to estimate the number of cycles required to execute an add operation on a CPU. In doing so, we learn
 about what lets a CPU running a single thread of instructions to execute them in parallel.
 
-### Experiment Summary
+### Experiment summary
 
 We use different versions of a simple loop incrementing a sum variable:
 
@@ -89,7 +89,7 @@ We use different versions of a simple loop incrementing a sum variable:
 3. **`mystery0_unroll2`**: Loop unrolling with 2 additions per iteration.
 4. **`mystery0_unroll2_sums`**: Using two separate sum variables with loop unrolling.
 
-### Performance Metrics
+### Performance metrics
 
 Here are the key performance metrics observed from each experiment, rounded to three significant figures:
 
@@ -111,7 +111,7 @@ Here are the key performance metrics observed from each experiment, rounded to t
 - Branch prediction miss rate is the percentage of branch instructions that were mispredicted.
 - Branch prediction hit rate is the percentage of branch instructions that were correctly predicted.
 
-### Key Findings
+### Key findings
 
 When we unroll the loop from `mystery0` to `mystery0_unroll`, the number of cycles per iteration drops from 3.01 to
 1.18. This happens because the CPU can handle more work in parallel with fewer loop control instructions. The
@@ -131,12 +131,12 @@ on more instructions at the same time, making better use of its resources.
 
 To sum up, these experiments teach us several things about loop unrolling and parallel execution:
 
-1. **Reducing Loop Overhead**: Unrolling the loop reduces how often the loop control instructions run, cutting down the
+1. **Reducing loop overhead**: Unrolling the loop reduces how often the loop control instructions run, cutting down the
    total instruction count.
-2. **Increasing Parallelism**: Unrolling helps the CPU do more work in parallel, lowering the cycles per iteration.
-3. **Resource Competition**: Unrolling too much can cause more competition for CPU resources, which can slow down the
+2. **Increasing parallelism**: Unrolling helps the CPU do more work in parallel, lowering the cycles per iteration.
+3. **Resource competition**: Unrolling too much can cause more competition for CPU resources, which can slow down the
    overall execution time.
-4. **Minimizing Dependencies**: Using multiple sum variables reduces dependencies, allowing more parallel execution and
+4. **Minimizing dependencies**: Using multiple sum variables reduces dependencies, allowing more parallel execution and
    better performance.
 
 These points show the trade-offs involved in loop unrolling. It's important to balance reducing the loop overhead with
