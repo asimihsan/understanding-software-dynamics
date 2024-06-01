@@ -64,11 +64,12 @@ make
 After building the project, you can run the binaries from the `build/bin` directory. For example:
 
 ```sh
-./build/bin/mystery0
-./build/bin/mystery0_opt
-./build/bin/mystery0_unroll
-./build/bin/mystery0_unroll2
-./build/bin/mystery0_unroll2_sums
+sudo ./build/aarch64/src/mystery0
+sudo ./build/aarch64/src/mystery0_opt
+sudo ./build/aarch64/src/mystery0_unroll
+sudo ./build/aarch64/src/mystery0_unroll2
+sudo ./build/aarch64/src/mystery0_unroll2_sums
 ```
 
-Each binary will execute its respective functionality and print the instrumentation report.
+Each binary will execute its respective functionality and print the instrumentation report. You need to use `sudo`
+because we need privileged access to performance counters.
