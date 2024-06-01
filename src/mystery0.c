@@ -1,7 +1,6 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <time.h>
-#include <x86intrin.h>
 
 #if defined(__x86_64__) || defined(_M_X64)
 #include <x86intrin.h>
@@ -12,6 +11,7 @@
 static const int kIterations = 1000 * 1000000;
 
 int main(int argc, const char **argv) {
+    uint64_t startcy = 0, stopcy = 0;
     uint64_t startcy = 0, stopcy = 0;
     uint64_t sum = 0;
 
