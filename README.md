@@ -5,14 +5,32 @@ This is a sample C project using CMake for building and maintaining code snippet
 ## Directory Structure
 
 ```
-my_c_project/
+.
 ├── CMakeLists.txt
 ├── build/
-├── src/
-│   ├── main.c
-│   └── snippet1.c
-├── include/
-│   └── snippet1.h
+├── chapters/
+│   ├── chapter1/
+│   │   ├── section1/
+│   │   │   ├── CMakeLists.txt
+│   │   │   ├── main.c
+│   │   │   ├── snippet1.c
+│   │   │   └── snippet1.h
+│   │   └── section2/
+│   │       ├── CMakeLists.txt
+│   │       ├── main.c
+│   │       ├── snippet2.c
+│   │       └── snippet2.h
+│   └── chapter2/
+│       ├── section1/
+│       │   ├── CMakeLists.txt
+│       │   ├── main.c
+│       │   ├── snippet3.c
+│       │   └── snippet3.h
+│       └── section2/
+│           ├── CMakeLists.txt
+│           ├── main.c
+│           ├── snippet4.c
+│           └── snippet4.h
 └── README.md
 ```
 
@@ -28,5 +46,5 @@ make
 ## Running the Project
 
 ```sh
-./my_c_project
+./chapter1/section1/chapter1_section1
 ```
