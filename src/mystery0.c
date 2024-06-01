@@ -2,38 +2,40 @@
 #include <stdio.h>
 #include <time.h>
 
-#if defined(__x86_64__) || defined(_M_X64)
+#ifdef __x86_64__
 #include <x86intrin.h>
 #elif defined(__aarch64__)
 
 #include <sys/time.h>
 
+#include <sys/time.h>
+#else
+#error "Unsupported architecture"
 #endif
 
 static const int kIterations = 1000 * 1000000;
 
+static inline uint64_t read_tsc(void) {
+#ifdef __x86_64__
+    return __rdtsc();
+#elif defined(__aarch64__)
+    uint64_t ticks;
+    asm volatile("mrs %0, PMCCNTR_EL0" : "=r" (ticks));
+    return ticks;
+#endif
+}
+
 int main(int argc, const char **argv) {
-    uint64_t startcy = 0, stopcy = 0;
+    uint64_t startcy, stopcy;
     uint64_t sum = 0;
 
-#if defined(__x86_64__) || defined(_M_X64)
-    startcy = __rdtsc();                       // starting cycle count
-#elif defined(__aarch64__)
-    struct timeval tv;
-    gettimeofday(&tv, NULL);
-    startcy = tv.tv_sec * 1000000 + tv.tv_usec;
-#endif
+    startcy = read_tsc();                       // starting cycle count
 
     for (int i = 0; i < kIterations; ++i) {   // loop kIterations times
         sum += 1;                               // the add we want to measure
     }
 
-#if defined(__x86_64__) || defined(_M_X64)
-    stopcy = __rdtsc();                       // ending cycle count
-#elif defined(__aarch64__)
-    gettimeofday(&tv, NULL);
-    stopcy = tv.tv_sec * 1000000 + tv.tv_usec;
-#endif
+    stopcy = read_tsc();                       // ending cycle count
 
     int64_t elapsed = stopcy - startcy;
     double felapsed = elapsed;
