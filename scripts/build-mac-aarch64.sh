@@ -10,3 +10,4 @@ mkdir -p build/aarch64
 cd build/aarch64
 cmake -DCMAKE_TOOLCHAIN_FILE=../../cmake/toolchains/aarch64.cmake ../..
 make
+make

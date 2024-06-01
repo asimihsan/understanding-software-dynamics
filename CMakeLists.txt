@@ -10,3 +10,4 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 
 # Add subdirectories for source files
 add_subdirectory(src)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
