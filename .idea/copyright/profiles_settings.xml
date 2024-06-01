@@ -1,0 +1,7 @@
+<component name="CopyrightManager">
+  <settings default="Mozilla">
+    <module2copyright>
+      <element module="All" copyright="Mozilla" />
+    </module2copyright>
+  </settings>
+</component>

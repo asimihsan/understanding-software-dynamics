@@ -8,7 +8,7 @@
   <a href="#prerequisites">Prerequisites</a> •
   <a href="#building-the-project">Building the project</a> •
   <a href="#running-the-binaries">Running the binaries</a> •
-  <a href="#performance-analysis-and-findings">Performance analysis and findings</a>
+  <a href="#chapter-2---measuring-cpus">Chapter 2 - Measuring CPUs</a>
 </p>
 
 `understanding_software_dynamics` is a project that involves reading and implementing concepts from the
@@ -142,3 +142,7 @@ To sum up, these experiments teach us several things about loop unrolling and pa
 These points show the trade-offs involved in loop unrolling. It's important to balance reducing the loop overhead with
 managing CPU resources and dependencies. While we see clear performance changes from these experiments, some guesses
 about why (like resource competition) would need more detailed testing to confirm.
+
+## License
+
+This project is licensed under the Mozilla Public License 2.0 - see the [LICENSE](LICENSE) file for details.
