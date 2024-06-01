@@ -1,9 +1,16 @@
-# understanding_software_dynamics
+<h1 align="center">
+  understanding_software_dynamics
+</h1>
 
-## Introduction
+<h4 align="center">Reading the book "Understanding Software Dynamics" by Richard L. Sites</h4>
 
-Reading the
-book ["Understanding Software Dynamics" by Richard L. Sites](https://www.goodreads.com/book/show/57850403-understanding-software-dynamics).
+<p align="center">
+  <a href="#prerequisites">Prerequisites</a> •
+  <a href="#building-the-project">Building the Project</a> •
+  <a href="#running-the-binaries">Running the Binaries</a>
+</p>
+
+`understanding_software_dynamics` is a project that involves reading and implementing concepts from the book "Understanding Software Dynamics" by Richard L. Sites.
 
 ## Prerequisites
 
