@@ -1,7 +1,8 @@
 # Add current dir as src dir
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/instrumentation)
 
-add_library(instrumentation instrumentation.cpp)
+add_library(instrumentation instrumentation/instrumentation.cpp)
 
 # Define executables
 add_executable(mystery0 mystery0.c)

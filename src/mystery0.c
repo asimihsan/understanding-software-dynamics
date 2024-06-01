@@ -1,4 +1,4 @@
-#include "performancecounters/instrumentation.h"
+#include "instrumentation/instrumentation.h"
 
 #include <stdint.h>
 
@@ -20,6 +20,7 @@ int main(int argc, const char **argv) {
     }
 
     stop_instrumentation();
+    instrumentation_result res = get_instrumentation_result();
     print_instrumentation_report();
 
     return 0;
