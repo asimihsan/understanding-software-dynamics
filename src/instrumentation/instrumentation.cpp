@@ -46,15 +46,13 @@ extern "C" void print_instrumentation_report() {
     printf("Cycles: %lu\n", result.cycles());
     printf("Branches: %lu\n", result.branches());
     printf("Branch misses: %lu\n", result.branch_misses());
-//    printf("Cycles per loop: %f\n", cycles_per_iteration);
-//    printf("Cycles per add: %f\n", cycles_per_iteration / 4.0);
-    printf("IPC: %f\n", result.instructions() / (double) result.cycles());
-    printf("Branch prediction miss rate: %f\n",
+    printf("IPC: %.2f\n", result.instructions() / (double) result.cycles());
+    printf("Branch prediction miss rate: %.2f\n",
            result.branch_misses() / (double) result.branches());
-    printf("Branch prediction hit rate: %f\n",
+    printf("Branch prediction hit rate: %.2f\n",
            1.0 - result.branch_misses() / (double) result.branches());
-    printf("Instructions per branch miss: %f\n",
+    printf("Instructions per branch miss: %.2f\n",
            result.instructions() / (double) result.branch_misses());
-    printf("Instructions per branch hit: %f\n",
+    printf("Instructions per branch hit: %.2f\n",
            result.instructions() / (double) (result.branches() - result.branch_misses()));
 }
